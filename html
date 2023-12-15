@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(2, 2, 43);
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+        
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(161, 4, 95);
+      }
+      .right {
+        align-self: flex-end;
+      }
+      .right ul {
+        display: flex;
+        flex-direction: row;
+      }
+      li {
+        margin: 20px;
+      }
+      .first {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 200px;
+        margin-bottom: 150px;
+        font-size: larger;
+      }
+      .left{
+        margin-left: 50px;
+      }
+      .leftsection {
+        margin: 5px;
+        width: 250px;
+        font-size: 2 rem;
+      }
+      .purple {
+        color: rgb(247, 245, 249);
+      }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+      }
+      a{
+        text-decoration: none;
+      }
+      nav ul li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0px;
+        bottom: -6px;
+        transition: .5s;
+      }
+      nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      #element {
+        color: blueviolet;
+        font-size: larger;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+      }
+      .about-col-1 {
+        flex-basis: 30%;
+      }
+      .about-col-2 {
+        flex-basis: 50%;
+      }
+      .sub {
+        font-weight: 600;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      .tabtile {
+        display: flex;
+        margin: 20px 0px 40px;
+      }
+      .tablinks {
+        margin-right: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        position: relative;
+      }
+      .tablinks::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+      }
+      .tablinks::after {
+        width: 100%;
+      }
+      .tab-contents ul li{
+        list-style: none;
+        margin:10px 0;
+      }
+      .tab-contents ul li span{
+      color: palevioletred;
+      }
+      .tab-contents{
+        display: none;
+      }
+      .tab-contents.firsttab{
+        display: block;
+      }
+      .skill
+      {
+         display:flex;
+         flex-direction: row;
+         margin-top: 70px;
+         margin-bottom: 100px;
+
+
+      }
+      .skillbox{ text-decoration: underline;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 200px;
+        border:2px solid red;
+        margin:28px;
+        text-align: center;
+        background-color: rgb(219, 157, 77);
+        
+        
+        
+      }
+      .sk{
+        display: flex;
+        justify-content: center;
+        font-family:s;
+        font-size: larger;
+        border:2px solid black;
+        background-color:rgb(161, 4, 95);
+        font-size: 39px;
+        font-weight: bold;
+        text-decoration: underline;
+        text-overflow: inherit;
+       
+        
+
+      }
+     
+      
+      .education
+      { 
+       display: flex;
+       justify-content: space-around;
+       margin-bottom: 150PX;
+      }
+      .cl{ margin-top: 100px;
+        padding: 2PX;
+
+        border:2px solid rgb(222, 213, 187);
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        background-color: rgb(35, 34, 33);
+        color: rgb(218, 4, 4);
+        font-weight: bold;
+        font-size: 15px;
+        font-weight: 500;;
+         border-radius: 10px;
+      }
+     .tl{ color: rgb(255, 255, 255);
+      font-size: 25px;
+      text-decoration: underline;
+     }
+     .pt{ margin-top: 100px;
+      border:2px solid red;
+      height: 150px;
+      width: 200px;
+      background-color: rgb(230, 211, 187);
+      text-align: center;
+      color: rgb(255, 0, 0);
+      font-weight: bold;
+      text-decoration: underline;
+      border-radius: 10px;
+     }
+     #CF{
+      background-image: url(cer3l19eex0wy900b101.webp);
+      background-size: 200px 100px;
+      background-repeat: no-repeat;
+      background-position-y: center ;
+      background-size: 200px 100px;
+     }
+     #HC{ 
+      background-image: url(HackerRank.jpeg);
+      background-repeat: no-repeat;
+      background-size: 200px,350px;
+      background-position-y: center ;
+      
+     }
+     #CC
+     {
+      background-image: url(th.jpg);
+      background-repeat: no-repeat;
+      background-size: 200px,350px;
+      background-position-y: center ;
+     }
+     #LT
+     {
+      background-image: url(leetcode.jpg);
+      background-repeat: no-repeat;
+      background-size: 200px,350px;
+      background-position-y: center ;
+     }
+     .a{
+      text-decoration: none;
+      color: rgb(68, 26, 219);
+     }
+     .profiles
+     {
+      display: flex;
+      justify-content: 
+      space-between;
+      margin-bottom: 100PX;
+     }
+     .con{
+      
+      height: 100px;
+      width: 100px;
+      text-align: center;
+     }
+     .contact{
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+     }
+     .img{
+      width: 50px;
+      height: 50px;
+     }      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Ajay's Portfolio</div>
+        <div class="right">
+          <ul type="none">
+            <li><a href="#">Home </a></li>
+            <li><a href="#">Eduation</a></li>
+            <li><a href="#">Skills </a></li>
+            <li><a href="#">profiles</a></li>
+            <li><a href="#">Contact </a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="main">
+      <main>
+        <section class="first">
+          <div class="leftsection">
+            I m <span class="purple">Ajay sharma</span> 
+            <div>and I am a Newbie Web Developer,</div>
+            <span id="element"></span>
+          </div>
+          <div class="rightsection">
+            <img src="/software-development.png" alt="" width="300px" />
+          </div>
+        </section>
+      </main>
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script>
+       var typed = new Typed("#element", {
+          strings: ["Coding enthususiast and  Love to learn new skills |"],
+          typeSpeed: 70,
+          
+        });
+      </script>
+    </div>
+  
+    
+    <div class="sk">SKILLS</div>
+    <div class="skill">
+        <div class="skillbox">
+          
+          <img src="cplusplus.png" alt="" class="im" width="180px" height="195px">
+        </div>
+        <div class="skillbox" id="c++">
+          <img src="355-3559027_c-programming-language-logo-clipart-png-download-c.png" alt="" class="im" width="180px" height="195px">
+        </div>
+        <div class="skillbox">
+          <img src="image1.png" alt="" class="im" width="180px" height="195px">
+        </div>
+        <div class="skillbox">
+          <img src="css-beginners-tutorial.webp" alt="" class="im" width="180px" height="195px">
+        </div>
+        
+        <div class="skillbox">
+          <img src="JavaScript-Logo-2048x1280.png" alt="" class="im" width="250px" height="195px">
+        </div>
+        <div class="skillbox">
+          <img src="R2.png" alt="" class="im" width="195px" height="200px">
+        </div>
+    </div>
+  </div>
+  <div class="sk">EDUCATION</div>
+  <div class="education">
+    <div class="cl"> <div class ="tl">HIGH SCHOOL</div>
+    <br>
+   <span >FROM</span> : GOVT. GORKHI HR.SEC SCHOOL,GWALIOR
+  <BR>
+    <BR>
+      <BR> <BR>
+    PERCENTAGE : 98.7%
+  </div>
+    <div class="cl"> <div class ="tl">ENTER</div>
+    <br>
+   FROM : EXCELLENCE SCHOOL BHOPAL
+   (SUPER 100)
+  <BR>
+    <BR> <BR> 
+  PERCENTAGE : 94%</div>
+    <div class="cl"> <div class ="tl">BTECH</div>
+    <br>
+  FROM : MAULANA AZAD NATIONAL INSTITUTE OF TECHNOLOGY ,BHOPAL
+<BR>
+<BR>
+BRANCH : COMPUTER SCIENCE AND ENGINEERING 
+<BR>
+  <BR>
+CGPA : 8.57(PRESENT)</div>
+    
+  </div>
+  <div class="sk">PROFILES</div>
+  <div class="profiles">
+      <div class="pt" ID="CF">
+        <div>
+           <a class="a" href="https://codeforces.com/profile/ajay.16">CODEFORCES</a></div>
+      </div>
+      <div class="pt" ID="CC">
+        <div> <a class="a"  href="https://www.codechef.com/users/ajaysh1">CODECHEF</a></div>
+      </div>
+      <div class="pt" ID="HC">
+        <div> <a class="a"  href="https://www.hackerrank.com/profile/ajaysharmapns">HACKERRANK</a></div>
+      </div>
+      <div class="pt" ID="LT">
+        <div> <a class="a"  href="https://leetcode.com/ajaysharma12/">LEETCODE</a></div>
+      </div>
+     
+      
+  </div>
+  <div class="sk">CONTACT</div>
+  <div class="contact">
+    <div class="con"><a href="https://github.com/AjaySh1"><img class ="img" src="a.jpg" alt="" srcset=""></a></div>
+    <div class="con"><a href="https://www.linkedin.com/in/ajay-sharma-9436741b0/"><img  class ="img" src="linkedin-blue-style-logo-png-0.png" alt="" srcset=""></a></div>
+    <div class="con"><a href="ajaysharmapns1234@gmail.com"><img class ="img"  src="Gmail-Logo.png" alt="" srcset=""></a></div>
+  </div>
+    <script>
+
+
+
+
+      var tablinks=document.getElementsByClassName("tablinks");
+      var tabcontents= document.getElementsByClassName("tab-contents");
+      function opentab(tabname)
+      {
+        for(tablink of tablinks)
+        {
+              for(tablinks of tablinks)
+              {
+                tablink.classList.remove("active-link");
+              }
+              for(tabcontent of tabcontents)
+              {
+                tabcontent.classList.remove("active-tab");
+              }
+        }
+      }
+    </script>
+  </body>
+</html>
+  
+    <!-- <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="/software-development.png" height="250" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub">About Me</h1>
+            <p1>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+              voluptatibus fugit asperiores, quod in porro odit neque voluptatem
+              dicta sequi laborum sit cupiditate vero quis earum nesciunt nisi
+              voluptate facilis aperiam dolores? Voluptates quo ullam, amet
+              ratione totam, odit debitis vero sed vitae dolorum recusandae!
+              Odio incidunt quae recusandae aperiam.
+            </p1>
+            <div class="tabtile">
+              <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tablinks"onclick="opentab('experience')">Experience</p>
+              <p class="tablinks"onclick="opentab('education')">Eduation</p>
+            </div>
+            <div class="tab-contents firsttab" id="skills">
+              <ul>
+                <li><span>Competiti</span><br />Programming</li>
+                <li>
+                  <span>WebD</span><br />HTML<br>CSS
+                </li>
+                <li><span>DSA</span><br />Dsa in C++</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents secondtab" id="experience">
+              <ul>
+                <li><span>Competitive</span><br />Programming</li>
+                <li>
+                  <span>WebD</span><br />HTML<br>CSS
+                </li>
+                <li><span>DSA</span><br />Dsa in C++</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents thirdtab"id="education">
+              <ul>
+                <li><span>Competitive</span><br />Programming</li>
+                <li>
+                  <span>WebD</span><br />HTML<br>CSS
+                </li>
+                <li><span>DSA</span><br />Dsa in C++</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
